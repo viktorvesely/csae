@@ -147,8 +147,8 @@ python ./gen_altered.py
 ```
 it will generate `./altered_chess_trajectories.html` with 10 random pairs of trajectories (open in any browser). Re-run the script to get another 10 pairs.
 
-### Evaluation scripts
-## lc0_concepts.py
+## Evaluation scripts
+### lc0_concepts.py
 
 Extracts and labels chess games with specific concepts, and combines them with corresponding latent activations.
 
@@ -166,7 +166,7 @@ Extracts and labels chess games with specific concepts, and combines them with c
 
 ---
 
-## linear_classifier.py
+### linear_classifier.py
 
 Trains and evaluates a linear classifier on the different concepts based on the activations.
 
@@ -180,9 +180,9 @@ Trains and evaluates a linear classifier on the different concepts based on the 
 
 ---
 
-## mau_knight_fork.py
+### mau_knight_fork.py
 
-Computes **Most Active Units (MAU)** for the **Knight Fork** concept.
+Computes **MAUs** for the **Knight Fork** concept.
 
 **Arguments (positional via `sys.argv`):**
 1. `input_file`: Path to latent activations per concept.
@@ -192,7 +192,7 @@ Computes **Most Active Units (MAU)** for the **Knight Fork** concept.
 
 ---
 
-## analysis.py
+### analysis.py
 
 Performs analysis by clamping latent activations and comparing altered vs. unaltered network outputs.
 
