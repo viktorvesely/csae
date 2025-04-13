@@ -209,8 +209,7 @@ Performs analysis by clamping latent activations and comparing altered vs. unalt
 6. `indices`: space seperated list of latent dimension indices to clamp (e.g. for the concept knight_fork: `18677 32541 63744`).
 
 **Functionality:**
-- Performs targeted intervention experiments on selected latent dimensions.
-- Compares network behavior before and after clamping to evaluate the causal effect of latent features.
+- Compares network behavior before and after clamping. Counts the number of times a concept is played.
 ### Example of arguments:
 python3 lc0_concepts /home3/s3799042/Trajectories/ /home3/s3799042/Trajectories/Latent/ /home3/s3799042/Test/concept_latent.npy
 python3 linear_classifier.py /scratch/s3799042/data/Chess_SAE/concept_latent.npy /home3/s3799042/Test/
