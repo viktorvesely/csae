@@ -205,7 +205,7 @@ Performs analysis by clamping latent activations and comparing altered vs. unalt
    - `knight_fork`
    - `pawn_flank`
    - `king_move`
-6. `indices`: Comma-separated list of latent dimension indices to clamp (e.g., `10,25,30`).
+6. `indices`: space seperated list of latent dimension indices to clamp (e.g. for the concept knight_fork: `18677 32541 63744`).
 
 **Functionality:**
 - Performs targeted intervention experiments on selected latent dimensions.
