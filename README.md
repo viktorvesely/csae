@@ -58,6 +58,7 @@ Files that are not mentioned here are in the reposity due to legacy reasons and 
 - **`./lc0/cnnsae_simple.py`** Duplicate CSAE architecture necessary for the Lc0 sub-package.
 - **`./lc0/mind_control.py`** Used for live Lc0 behaviour steering, generates altered_trajectories
 - **`./lc0/t79.onnx`** Lc0 network (architecture and weights).
+- **`./lc0/analysis.py` `./lc0/lc0_concepts.py` `./lc0/linear_classifier.py` `./lc0/mau_knight_fork.py`** Used for evaluation, description below
 - **`./viktor/lichess_db_standard_rated_2024-08.pgn.zst`** lichess database of chess games, used in generation training and testing fens. Can be downloaded here https://database.lichess.org (2024 August). Download it and place it to the folder with the same name.
 
 ## Requirements
@@ -210,7 +211,11 @@ Performs analysis by clamping latent activations and comparing altered vs. unalt
 **Functionality:**
 - Performs targeted intervention experiments on selected latent dimensions.
 - Compares network behavior before and after clamping to evaluate the causal effect of latent features.
-
+### Example of arguments:
+python3 lc0_concepts /home3/s3799042/Trajectories/ /home3/s3799042/Trajectories/Latent/ /home3/s3799042/Test/concept_latent.npy
+python3 linear_classifier.py /scratch/s3799042/data/Chess_SAE/concept_latent.npy /home3/s3799042/Test/
+python3 mau_knight_fork.py /scratch/s3799042/data/Chess_SAE/concept_latent.npy
+python3 analysis.py /home3/s3799042/Trajectories/ /home3/s3799042/Test/ normal altered knight_fork 18677 32541 63744
 # Plagiarism disclaimer
 
 We based this project on our previous deep-learning project. However, we have changed almost everything since then (the precise differentiation points are in the report), most notably:
