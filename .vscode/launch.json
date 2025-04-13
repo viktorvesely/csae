@@ -1,0 +1,62 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "CNNSAE",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/csae_train.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--small",
+                "--name",
+                "factwodiv2",
+                "--lsfactor",
+                "2",
+                "--checkpoint",
+                "20250311-092710_factwodiv2",
+                "--GFCdiv",
+                "2"
+            ]
+        },
+        {
+            "name": "Test",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "test.py",
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Activations",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/viktor/activations.py",
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Training",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/viktor/training.py",
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Save data",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/viktor/save_data.py",
+            "console": "integratedTerminal",
+        }
+    ]
+}
