@@ -210,10 +210,10 @@ Performs analysis by clamping latent activations and comparing altered vs. unalt
 **Functionality:**
 - Compares network behavior before and after clamping. Counts the number of times a concept is played.
 ### Example of arguments:
-python3 lc0_concepts /home3/s3799042/Trajectories/ /home3/s3799042/Trajectories/Latent/ /home3/s3799042/Test/concept_latent.npy
-python3 linear_classifier.py /scratch/s3799042/data/Chess_SAE/concept_latent.npy /home3/s3799042/Test/
-python3 mau_knight_fork.py /scratch/s3799042/data/Chess_SAE/concept_latent.npy
-python3 analysis.py /home3/s3799042/Trajectories/ /home3/s3799042/Test/ normal altered knight_fork 18677 32541 63744
+python3 lc0_concepts /home3/Trajectories/ /home3/Trajectories/Latent/ /home3/Test/concept_latent.npy
+python3 linear_classifier.py /scratch/data/Chess_SAE/concept_latent.npy /home3/Test/
+python3 mau_knight_fork.py /scratch/data/Chess_SAE/concept_latent.npy
+python3 analysis.py /home3/Trajectories/ /home3/Test/ normal altered knight_fork 18677 32541 63744
 # Plagiarism disclaimer
 
 We based this project on our previous deep-learning project. However, we have changed almost everything since then (the precise differentiation points are in the report), most notably:
