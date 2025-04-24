@@ -7,10 +7,9 @@ The alignment of AI behaviour with human behaviour is an ongoing challenge in th
 2. Behaviour steering - to actually align the network behaviour with human behaviour we can artificially increase or decrease the activation of the mono-semantic neuron, which either surpress unwanted behaviour or encourages wanted traits of the model.
 
 ## Explanation
-
-Very short explanation of the Convolutional sparse autoencoder (CSAE) is provided here. For full explanation please take a look at our report.
-
 CSAE is a neural network with two parts: encoder and decoder. The job of encoder is two take neural activations of Leela chess zero (Lc0) which are polysemantic (single neuron participates in multiple concepts) and project them to a larger (10x) latent space where each neuron is mono-semantic (the activations become sparse). The job of decoder is to undo this operation and restore the original activations (necessary for training and behaviour steering). The CSAE is trained to reconstruct the original activations faithfully and to make the latent space as sparse as possible (L1 activation penalty).
+
+For full explanation please take a look at our report.
 
 ## Data/weights Download link
 
@@ -61,9 +60,9 @@ Files that are not mentioned here are in the reposity due to legacy reasons and 
 - **`./lc0/analysis.py` `./lc0/lc0_concepts.py` `./lc0/linear_classifier.py` `./lc0/mau_knight_fork.py`** Used for evaluation, description below
 - **`./viktor/lichess_db_standard_rated_2024-08.pgn.zst`** lichess database of chess games, used in generation training and testing fens. Can be downloaded here https://database.lichess.org (2024 August). Download it and place it to the folder with the same name.
 
-## Requirements
+## Requirements Windows
 
-This project **only** supports windows **not linux** (none of are group members have linux). The only thing wich works also on linux is training and inference of CSAE (but nothing related to live manipulation inference on Lc0). There are 2 reasons for this: stockhish.exe is build for windows only (this one should be easy to replace), and the lczerolens package required very specific manual code editing fix (which will be explained here and works only on windows).
+Stockhish.exe is build for windows only and to make the lczerolens package work on Windows a specific manual code editing fix is required (which will be explained).
 
 Read the previous section (project overview) and follow the instructions carefully as placing wrong file to wrong place will result in error.
 
